@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 
 customInitApp() // Important otherwise you will receive no-app error
 
-export async function POST() {
+export async function GET() {
   const cookieStore = await cookies();
   const sessionValue = cookieStore.get("session")?.value;
 

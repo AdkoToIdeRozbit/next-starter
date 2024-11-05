@@ -1,8 +1,7 @@
 import * as admin from "firebase-admin";
-import { getApps } from "firebase/app";
 
 export function customInitApp() {
-  if (getApps().length <= 0) {
+  if (admin.apps.length === 0) {
     admin.initializeApp({
       credential: admin.credential.cert({
         clientEmail: process.env.FIREBASE_CLIENT_EMAIL,

@@ -6,9 +6,7 @@ export default function Logout() {
   const router = useRouter();
 
   useEffect(() => {
-    fetch(`/api/logout`, {
-      method: 'POST'
-    })
+    fetch(`/api/logout`)
     .catch(err => {
       console.log(err);
     }).finally(() => {
